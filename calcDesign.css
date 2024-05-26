@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    45deg,
+    rgba(170, 137, 76, 0.796),
+    rgba(255, 0, 0, 0.553)
+  );
+  height: 100vh;
+}
+
+#main-outer {
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 20px;
+  gap: 20px;
+  border: 2px solid rgb(255, 0, 43);
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(147, 70, 75, 0.616);
+  background-image: linear-gradient(
+    45deg,
+    rgba(40, 33, 33, 0.975),
+    rgba(3, 2, 2, 0.545)
+  );
+}
+
+.heading-area {
+  text-align: center;
+}
+
+.heading-area > h1 {
+  color: aqua;
+  font-weight: bolder;
+  font-family: "Ubuntu", sans-serif;
+}
+
+#display {
+  display: flex;
+  height: 100px;
+}
+
+#display > input {
+  padding: 10px;
+  border: 3px solid teal;
+  border-radius: 10px;
+  flex: 1 1 auto;
+  font-size: large;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bolder;
+  color: maroon;
+}
+
+#btn-area {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.calcBtn {
+  flex: 1 1 calc(33.33% - 20px);
+  max-width: 100px;
+  height: 80px;
+  border-radius: 50px;
+  background-color: teal;
+  box-shadow: 0 0 12px greenyellow inset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out,
+    box-shadow 0.1s ease-in-out;
+}
+
+.calcBtn > span {
+  font-size: large;
+  font-weight: bolder;
+  color: rgb(7, 255, 48);
+  font-family: "Ubuntu", sans-serif;
+}
+
+.calcBtn:hover {
+  background-color: chocolate;
+  transform: scale(1.1);
+  transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out;
+  box-shadow: 0 0 20px red inset;
+}
+
+@media screen and (max-width: 600px) {
+  #main-outer {
+    width: 100%;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  #display {
+    height: 80px;
+  }
+
+  #display > input {
+    font-size: medium;
+  }
+
+  .calcBtn {
+    height: 40px;
+  }
+
+  .calcBtn > span {
+    font-size: medium;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .calcBtn {
+    flex: 1 1 calc(50% - 10px);
+    height: 30px;
+  }
+
+  .calcBtn > span {
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 240px) {
+  .calcBtn {
+    flex: 1 1 calc(10% - 2px);
+    height: 30px;
+  }
+  #btn-area {
+    height: auto;
+  }
+  .body {
+    display: block;
+  }
+
+  #main-outer {
+    gap: 2px;
+  }
+
+  .calcBtn > span {
+    font-size: small;
+  }
+
+  #display > input {
+    max-width: 210px;
+    height: 40px;
+    font-size: small;
+  }
+}
