@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Convert HTMLCollection to an array using Array.from
     const btns = Array.from(document.getElementsByClassName("calcBtn"));
     const display = document.getElementById("inp");
+    let ans = 0;
 
     const clearErrorMessages = () => {
         if (
@@ -26,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const result = parser(eval(display.value));
             if (result !== undefined) {
                 display.value = result;
+                ans = result;
             }
         } catch (e) {
             display.value = "Enter a valid expression";
@@ -33,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     display.addEventListener("keypress", (e) => {
+
         if (e.key === "Enter") {
             clearErrorMessages();
             evaluateExpression();
@@ -44,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const val = e.target.innerText;
             clearErrorMessages();
 
+            if (display.value == ans) display.value = "";
             if (val === "C") {
                 display.value = "";
             } else if (val === "B") {
