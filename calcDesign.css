@@ -30,8 +30,8 @@ body {
   box-shadow: 10px 10px 10px rgba(147, 70, 75, 0.616);
   background-image: linear-gradient(
     45deg,
-    rgba(40, 33, 33, 0.975),
-    rgba(3, 2, 2, 0.545)
+    rgba(101, 100, 100, 0.975),
+    rgba(77, 77, 77, 0.545)
   );
 }
 
@@ -75,8 +75,8 @@ body {
   max-width: 100px;
   height: 80px;
   border-radius: 50px;
-  background-color: teal;
-  box-shadow: 0 0 12px greenyellow inset;
+  background-color: rgb(85, 78, 78);
+  box-shadow: 0 0 12px orangered inset;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,7 +87,7 @@ body {
 .calcBtn > span {
   font-size: large;
   font-weight: bolder;
-  color: rgb(7, 255, 48);
+  color: rgb(214, 144, 53);
   font-family: "Ubuntu", sans-serif;
 }
 
